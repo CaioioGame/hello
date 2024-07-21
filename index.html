@@ -1,43 +1,80 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Spinning Cat Site</title>
+	<title>Cat Real</title>
 	<style>
 		body {
-			background-color: #000; /* temporary background color */
-			height: 100vh;
 			margin: 0;
 		}
 		
 		.text-container {
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
 			text-align: center;
 			font-family: 'Comic Sans MS', cursive;
 			font-size: 36px;
-			color: #fff;
+			color: #fff; /* white text */
 			text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+			padding: 20px;
+			transition: font-size 0.2s, color 0.2s; /* add transition effect */
+		}
+		
+		.text-container:hover {
+			font-size: 40px; /* increase font size on hover */
+			color: #ffff00; /* change text color to yellow on hover */
 		}
 		
 		.gif-container {
-			position: absolute;
+			text-align: center;
+			padding: 20px;
+		}
+		
+		.gif-container img {
+			width: 500px; /* increase GIF width */
+			border-radius: 10px; /* add a slight border radius */
+		}
+		
+		.background-gif {
+			position: fixed;
 			top: 0;
 			left: 0;
-			width: 100%;
+			width: 100vw;
 			height: 100vh;
-			z-index: -1; /* put the GIF behind the text */
+			z-index: -1; /* make it a background */
+			background-color: #000; /* black background */
+			justify-content: center;
+			align-items: center;
+			display: flex;
+			opacity: 0.7; /* reduce brightness */
+		}
+		
+		.background-gif img {
+			width: 100%;
+			height: 100vh; /* make the GIF the height of the viewport */
+			object-fit: cover;
+			border: none;
+			border-radius: 0;
+			filter: brightness(0.7); /* reduce brightness of the GIF */
 		}
 	</style>
 </head>
 <body>
-	<div class="gif-container">
-		<div class="tenor-gif-embed" data-postid="27388554" data-share-method="host" data-aspect-ratio="1.50235" data-width="100%"><a href="https://tenor.com/view/maxwell-cat-spinning-spin-meme-gif-27388554">Maxwell Cat Sticker</a>from <a href="https://tenor.com/search/maxwell-stickers">Maxwell Stickers</a></div>
-		<script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+	<div class="background-gif">
+		<img src="https://tenor.com/view/goofy-cat-gif-2489042263160225691.gif" alt="Goofy Cat GIF">
 	</div>
+	
 	<div class="text-container">
 		Hello, I'm Cat!!, I'm very silly and stuff
+	</div>
+	<div class="gif-container">
+		<img src="https://tenor.com/view/maxwell-maxwell-spin-spinning-cat-maxwell-spinning-gif-27234188.gif" alt="Spinning Cat GIF">
+	</div>
+	<div class="text-container">
+		I am a cat and uhh I made some cool stuff
+	</div>
+	<div class="text-container">
+		If u wanna uhh become a cat then just say /e cat ok bye
+	</div>
+	<div class="gif-container">
+		<img src="https://tenor.com/view/watermelon-cat-gif-17965022338856134529.gif" alt="Watermelon Cat GIF">
 	</div>
 </body>
 </html>
